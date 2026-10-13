@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XVIII Años | Yolanda</title>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f4eaed;
+            background-image: radial-gradient(#e5d0d8 0.75px, #f4eaed 0.75px);
+            background-size: 15px 15px;
+            font-family: 'Poppins', sans-serif;
+            color: #4a3b42;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* =========================================
+           PANTALLA INICIAL: SOLO EL SOBRE EN 3D CON FONDO DE FLORES
+           ========================================= */
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Recuperamos el fondo de flores original */
+            background-color: #fce4ec;
+            background-image: linear-gradient(rgba(255, 240, 245, 0.35), rgba(255, 230, 238, 0.35)), url('image_8b63b5.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        
+        .envelope-container {
+            text-align: center;
+            cursor: pointer;
+            perspective: 1000px;
+            padding: 15px;
+        }
+
+        /* El sobre limpio en 3D, sin cuadros ni fondos extraños alrededor */
+        .custom-envelope-img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(130, 70, 90, 0.35),
+                        0 0 30px rgba(255, 255, 255, 0.6);
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
+            animation: float3D 4s ease-in-out infinite;
+        }
+
+        .custom-envelope-img:hover {
+            transform: scale(1.06) rotateX(4deg) rotateY(-3deg);
+            box-shadow: 0 35px 65px rgba(130, 70, 90, 0.45),
+                        0 0 40px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes float3D {
+            0%, 100% { 
+                transform: translateY(0) rotateX(2deg) rotateY(0deg); 
+            }
+            50% { 
+                transform: translateY(-12px) rotateX(-2deg) rotateY(2deg); 
+            }
+        }
+
+        .open-animation {
+            transform: scale(1.6);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* =========================================
+           BOTÓN FLOTANTE DE MÚSICA (Esquina Inferior Derecha)
+           ========================================= */
+        #music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border: 2px solid #9e6c80;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(150, 90, 110, 0.3);
+            z-index: 1000;
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+            display: none;
+        }
+        #music-control:hover {
+            transform: scale(1.1);
+        }
+        .rotating {
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* =========================================
+           CONTENEDOR PRINCIPAL CON MARCO ORNAMENTAL
+           ========================================= */
+        .invitation-card {
+            width: 100%;
+            max-width: 440px;
+            background: #ffffff;
+            box-shadow: 0 20px 60px rgba(150, 90, 110, 0.2);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid #d8b4c4;
+            outline: 2px solid #f3d6e2;
+            outline-offset: -8px;
+            padding: 10px;
+        }
+
+        .card-border-inner {
+            border: 1px solid #d8b4c4;
+            border-radius: 16px;
+            background: #fffdfd;
+            overflow: hidden;
+        }
+
+        /* Encabezado elegante con XVIII clásico */
+        .hero-section {
+            background: linear-gradient(135deg, #fff7f9 0%, #fbe8ee 100%);
+            padding: 40px 20px 30px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid #f2d8e2;
+        }
+        .hero-section .name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.8rem;
+            color: #9e6c80;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .hero-section .invite-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #7a5c68;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .hero-section .roman-year {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #9e6c80;
+            letter-spacing: 8px;
+            font-weight: 600;
+            margin-top: 5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* Cuerpo de la invitación */
+        .content-section {
+            padding: 25px 20px;
+        }
+
+        /* Tarjetas con gran profundidad */
+        .card-box {
+            background: #ffffff;
+            border: 1px solid #ebd4de;
+            border-radius: 16px;
+            padding: 25px 20px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 30px rgba(170, 110, 130, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .card-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(170, 110, 130, 0.15);
+            border-color: #d8b4c4;
+        }
+        .message {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #614d56;
+        }
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.6rem;
+            color: #9e6c80;
+            margin-bottom: 12px;
+        }
+        
+        /* Secciones de Papás y Padrinos */
+        .family-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+            font-size: 0.9rem;
+            color: #5a4850;
+        }
+        .family-col h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem;
+            color: #9e6c80;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        /* Itinerario Centrado */
+        .itinerary-item {
+            background: #faf2f5;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            text-align: center;
+            border-bottom: 3px solid #9e6c80;
+        }
+        .itinerary-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #4a3b42;
+            margin-bottom: 5px;
+        }
+        .itinerary-item p {
+            font-size: 0.85rem;
+            color: #735d67;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .btn-map-sm {
+            display: inline-block;
+            padding: 6px 16px;
+            background: #ffffff;
+            border: 1px solid #9e6c80;
+            color: #9e6c80;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            text-decoration: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-map-sm:hover {
+            background: #9e6c80;
+            color: #ffffff;
+        }
+
+        /* Botón de Confirmación de WhatsApp */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #25d366, #1ebd5d);
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .date-badge {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #9e6c80;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 📌 PANTALLA INICIAL: Solo la imagen del sobre actuando como botón interactivo en 3D -->
+    <div id="welcome-screen" onclick="openInvitation()">
+        <div class="envelope-container">
+            <img src="sobre.jpg" alt="Abrir Invitación" class="custom-envelope-img">
+        </div>
+    </div>
+
+    <!-- 🎵 AUDIO Y BOTÓN FLOTANTE DE MÚSICA -->
+    <audio id="bg-audio" src="cancion.mp3" loop></audio>
+    <div id="music-control" onclick="toggleMusic()" title="Reproducir / Pausar Música">
+        🎵
+    </div>
+
+    <!-- TARJETA PRINCIPAL CON MARCO ORNAMENTAL -->
+    <div class="invitation-card">
+        <div class="card-border-inner">
+            
+            <!-- Encabezado -->
+            <div class="hero-section">
+                <div class="name">Yolanda</div>
+                <div class="invite-text">te invito a celebrar mis</div>
+                <div class="roman-year">XVIII</div>
+            </div>
+
+            <!-- Cuerpo con Tarjetas -->
+            <div class="content-section">
+                
+                <!-- Tarjeta 1: Mensaje y Acompañantes -->
+                <div class="card-box">
+                    <p class="message" style="margin-bottom: 15px;">
+                        "Junto a mis seres queridos, quiero compartir este momento tan especial."
+                    </p>
+                    <div class="family-section">
+                        <div class="family-col">
+                            <h4>Mis Padres</h4>
+                            <p>Eustolia Cruz<br>Jaime Hernández</p>
+                        </div>
+                        <div class="family-col">
+                            <h4>Mis Padrinos</h4>
+                            <p>Minerva Cruz<br>Joel Osorio</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Fecha General -->
+                <div class="card-box">
+                    <span class="date-badge">Sábado 12 de Diciembre</span>
+                    <p style="font-size: 0.9rem; color: #735d67;">Acomódate y acompáñanos en nuestro itinerario:</p>
+                </div>
+
+                <!-- Tarjeta 3: Itinerario Centrado -->
+                <div class="card-box">
+                    <h2 class="section-title" style="margin-bottom: 15px;">Itinerario</h2>
+                    
+                    <!-- Misa -->
+                    <div class="itinerary-item">
+                        <h3>Misa</h3>
+                        <p><strong>Hora:</strong> 18:00 hrs<br>Parroquia de Santo Domingo de Guzmán en Ignacio Zaragoza Manzana 002, Cabecera Municipal, 56330 Chimalhuacán, Méx.</p>
+                        <a href="https://maps.app.goo.gl/wDMr6q2VFqw4QWuq8" target="_blank" class="btn-map-sm">Ver Ubicación Misa</a>
+                    </div>
+
+                    <!-- Recepción -->
+                    <div class="itinerary-item">
+                        <h3>Recepción</h3>
+                        <p><strong>Hora:</strong> 19:00 hrs<br>Calle Coyol MZ13 LT4, San Isidro, Chimalhuacán, EDOMEX.</p>
+                        <a href="https://maps.app.goo.gl/r7MYwVK5vHFAJ3Jv5" target="_blank" class="btn-map-sm">Ver Ubicación Recepción</a>
+                    </div>
+
+                    <!-- Vals -->
+                    <div class="itinerary-item" style="border-bottom-color: #d4af37;">
+                        <h3>Vals</h3>
+                        <p><strong>Hora:</strong> 20:30 hrs<br>Salón / Sede principal del evento.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Asistencia por WhatsApp -->
+                <div class="card-box">
+                    <h2 class="section-title">¿Nos acompañas?</h2>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px; color: #735d67;">Por favor confirma tu asistencia dando clic aquí:</p>
+                    <!-- 📌 MODIFICAR: Cambia 521XXXXXXXXXX por el número real de WhatsApp con lada -->
+                    <a href="https://wa.me/5215500000000?text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20para%20los%2018%20a%C3%B1os%20de%20Yolanda.%20Mi%20nombre%20es:%20" target="_blank" class="btn-whatsapp">
+                        Confirmar Asistencia
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de Apertura, Música y Botón Flotante -->
+    <script>
+        const audio = document.getElementById('bg-audio');
+        const musicBtn = document.getElementById('music-control');
+
+        function openInvitation() {
+            // Ocultar pantalla del sobre
+            const screen = document.getElementById('welcome-screen');
+            screen.classList.add('open-animation');
+
+            // Reproducir música y mostrar el botón flotante en la esquina inferior derecha
+            audio.play().then(() => {
+                musicBtn.style.display = 'flex';
+                musicBtn.classList.add('rotating');
+            }).catch(error => {
+                console.log("Autoplay bloqueado por el navegador:", error);
+                musicBtn.style.display = 'flex';
+            });
+        }
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                musicBtn.classList.add('rotating');
+                musicBtn.style.opacity = '1';
+            } else {
+                audio.pause();
+                musicBtn.classList.remove('rotating');
+                musicBtn.style.opacity = '0.6';
+            }
+        }
+    </script>
+
+</body>
+</html>
