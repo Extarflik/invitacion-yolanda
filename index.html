@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#0b0a09">
+    <meta name="theme-color" content="#0a0b0c">
     <meta name="color-scheme" content="dark">
     <meta name="description" content="Te invito a celebrar mis XVIII años el sábado 12 de diciembre de 2026.">
     <title>Mis XVIII Años | Yolanda</title>
@@ -15,19 +15,19 @@
 
     <style>
         /* =========================================================
-           BASE Y PALETA  (negro + dorado)
+           BASE Y PALETA  (negro + plateado)
            ========================================================= */
         :root {
-            --negro: #0b0a09;
-            --panel: #0f0e0c;
-            --oro: #d4af37;
-            --oro-claro: #f1deaa;
-            --oro-medio: #e0c06a;
-            --oro-hondo: #8f6d1f;
-            --marfil: #f4ead2;
-            --texto: #d9ceb4;
-            --texto-suave: #a89f89;
-            --grad-oro: linear-gradient(135deg, #f7e7ab 0%, #d4af37 42%, #a07d25 70%, #ecd48c 100%);
+            --negro: #0a0b0c;
+            --panel: #0e0f11;
+            --plata: #c4cad3;
+            --plata-claro: #eef1f6;
+            --plata-medio: #cfd5de;
+            --plata-hondo: #7d8691;
+            --marfil: #eef1f5;
+            --texto: #cdd2da;
+            --texto-suave: #98a0ab;
+            --grad-plata: linear-gradient(135deg, #ffffff 0%, #c4cad3 40%, #868f9b 68%, #eef1f6 100%);
 
             --serif: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
             --sc: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
@@ -53,19 +53,19 @@
             line-height: 1.6;
             overflow-x: hidden;
             background:
-                radial-gradient(70% 40% at 50% 0%, rgba(212, 175, 55, .10), transparent 70%),
-                radial-gradient(60% 35% at 50% 100%, rgba(212, 175, 55, .08), transparent 70%),
+                radial-gradient(70% 40% at 50% 0%, rgba(200, 207, 216, .10), transparent 70%),
+                radial-gradient(60% 35% at 50% 100%, rgba(200, 207, 216, .08), transparent 70%),
                 var(--negro);
         }
 
-        /* Ramitas doradas muy tenues de fondo (como en las referencias) */
+        /* Ramitas plateadas muy tenues de fondo (como en las referencias) */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             z-index: -1;
             pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170' viewBox='0 0 170 170' fill='none' stroke='%23d4af37' stroke-width='1' opacity='.10'%3E%3Cpath d='M22 150C42 108 64 76 108 44'/%3E%3Cpath d='M42 114q-14-4-18-17q14 0 18 17zM60 88q-4-14 6-22q6 12-6 22zM77 69q14-2 22 6q-12 8-22-6zM92 56q-2-14 8-20q4 12-8 20z'/%3E%3Cpath d='M126 160C136 138 148 124 164 112'/%3E%3Cpath d='M138 140q-10-2-13-11q10 0 13 11zM150 126q-2-10 5-15q4 9-5 15z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='170' height='170' viewBox='0 0 170 170' fill='none' stroke='%23c4cad3' stroke-width='1' opacity='.10'%3E%3Cpath d='M22 150C42 108 64 76 108 44'/%3E%3Cpath d='M42 114q-14-4-18-17q14 0 18 17zM60 88q-4-14 6-22q6 12-6 22zM77 69q14-2 22 6q-12 8-22-6zM92 56q-2-14 8-20q4 12-8 20z'/%3E%3Cpath d='M126 160C136 138 148 124 164 112'/%3E%3Cpath d='M138 140q-10-2-13-11q10 0 13 11zM150 126q-2-10 5-15q4 9-5 15z'/%3E%3C/svg%3E");
             background-size: 170px 170px;
         }
 
@@ -75,7 +75,7 @@
         h1, h2, h3, p { margin: 0; }
 
         :focus-visible {
-            outline: 2px solid var(--oro-claro);
+            outline: 2px solid var(--plata-claro);
             outline-offset: 3px;
         }
 
@@ -96,7 +96,7 @@
             place-items: center;
             padding: 1rem;
             /* Mismo fondo que ya tenías */
-            background: radial-gradient(circle, #2b1d24 0%, #11090d 100%), url('image_8b63b5.png');
+            background: radial-gradient(circle, #20252c 0%, #07080a 100%), url('image_8b63b5.png');
             background-blend-mode: overlay;
             background-size: cover;
             background-position: center;
@@ -128,7 +128,7 @@
             font-weight: 400;
             line-height: 1.1;
             padding: .05em .3em .18em;
-            background: var(--grad-oro);
+            background: var(--grad-plata);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -142,13 +142,13 @@
             place-items: center;
         }
 
-        /* Resplandor dorado detrás del sobre (sin recuadro) */
+        /* Resplandor plateado detrás del sobre (sin recuadro) */
         .sobre-caja::before {
             content: "";
             position: absolute;
             inset: -10% -8%;
             z-index: 0;
-            background: radial-gradient(closest-side, rgba(212, 175, 55, .22), transparent);
+            background: radial-gradient(closest-side, rgba(200, 207, 216, .22), transparent);
             pointer-events: none;
         }
 
@@ -182,7 +182,7 @@
             font-size: clamp(.85rem, 3vw, 1.05rem);
             letter-spacing: .32em;
             text-transform: uppercase;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
             text-shadow: 0 2px 6px rgba(0, 0, 0, .8);
             animation: pulso 2.2s ease-in-out infinite;
         }
@@ -226,7 +226,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(60% 50% at 50% 36%, rgba(212, 175, 55, .17), transparent 72%);
+            background: radial-gradient(60% 50% at 50% 36%, rgba(200, 207, 216, .17), transparent 72%);
             pointer-events: none;
         }
 
@@ -238,7 +238,7 @@
             font-style: italic;
             font-weight: 500;
             font-size: clamp(1.5rem, 5vw, 2.2rem);
-            color: var(--oro-claro);
+            color: var(--plata-claro);
             letter-spacing: .05em;
             margin-bottom: -.35em;
         }
@@ -249,19 +249,19 @@
             font-size: clamp(5.5rem, 24vw, 12rem);
             line-height: 1;
             letter-spacing: .02em;
-            background: linear-gradient(180deg, #fff3cf 0%, #ead18a 52%, #c9a24b 100%);
+            background: linear-gradient(180deg, #ffffff 0%, #dde2e9 52%, #9aa3af 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 6px 22px rgba(212, 175, 55, .28));
+            filter: drop-shadow(0 6px 22px rgba(200, 207, 216, .28));
         }
 
         .cinta {
             width: min(100%, 880px);
             margin: clamp(1.4rem, 4vw, 2.4rem) auto;
             padding: .95rem 0;
-            border-block: 1px solid rgba(212, 175, 55, .6);
+            border-block: 1px solid rgba(200, 207, 216, .6);
             overflow: hidden;
             -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
             mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
@@ -287,14 +287,14 @@
             font-size: clamp(.68rem, 2.3vw, .85rem);
             letter-spacing: .34em;
             text-transform: uppercase;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
             white-space: nowrap;
         }
 
         .cinta-grupo i {
             display: block;
             width: 7px; height: 7px;
-            background: var(--oro);
+            background: var(--plata);
             transform: rotate(45deg);
             flex-shrink: 0;
         }
@@ -310,8 +310,8 @@
             font-weight: 600;
             font-size: clamp(3.4rem, 15vw, 6.4rem);
             line-height: 1.1;
-            color: #ecd9a2;
-            text-shadow: 0 4px 20px rgba(212, 175, 55, .22);
+            color: #e4e8ee;
+            text-shadow: 0 4px 20px rgba(200, 207, 216, .22);
             margin-top: clamp(1.2rem, 4vw, 2.2rem);
         }
 
@@ -321,7 +321,14 @@
             font-style: italic;
             font-size: clamp(1.1rem, 3.5vw, 1.4rem);
             line-height: 1.65;
-            color: #cfc2a0;
+            color: #b9c0ca;
+            text-wrap: pretty;
+        }
+
+        .hero-texto { font-size: clamp(1.05rem, 3.3vw, 1.3rem); }
+        .hero-texto--cierre {
+            margin-top: 1.1rem;
+            color: var(--plata-claro);
             text-wrap: balance;
         }
 
@@ -355,26 +362,26 @@
             width: 72px;
             height: 1px;
             margin: .9rem auto 1.6rem;
-            background: var(--grad-oro);
+            background: var(--grad-plata);
         }
 
         /* =========================================================
-           PANEL NEGRO CON DORADO (marco doble)
+           PANEL NEGRO CON PLATEADO (marco doble)
            ========================================================= */
         .panel {
             position: relative;
             padding: clamp(2.4rem, 8vw, 3.4rem) clamp(1.4rem, 6vw, 2.8rem);
             text-align: center;
             background:
-                radial-gradient(120% 70% at 50% 0%, rgba(212, 175, 55, .11), transparent 62%),
-                linear-gradient(180deg, #181511, #0d0c0a);
-            border: 1px solid var(--oro);
+                radial-gradient(120% 70% at 50% 0%, rgba(200, 207, 216, .11), transparent 62%),
+                linear-gradient(180deg, #17191d, #0b0c0e);
+            border: 1px solid var(--plata);
             border-radius: 38px 10px 38px 10px;
             box-shadow:
-                inset 0 0 0 6px #0d0c0a,
-                inset 0 0 0 7px rgba(212, 175, 55, .5),
+                inset 0 0 0 6px #0b0c0e,
+                inset 0 0 0 7px rgba(200, 207, 216, .5),
                 0 24px 50px rgba(0, 0, 0, .55),
-                0 0 44px rgba(212, 175, 55, .07);
+                0 0 44px rgba(200, 207, 216, .07);
         }
 
         .titulo-display {
@@ -388,8 +395,8 @@
 
         .script { font-family: var(--script); font-weight: 400; }
 
-        .grad-oro {
-            background: var(--grad-oro);
+        .grad-plata {
+            background: var(--grad-plata);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -404,7 +411,7 @@
             font-size: clamp(2.1rem, 8.5vw, 3rem);
             line-height: 1.2;
             text-align: center;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
             margin-bottom: 2.6rem;
         }
 
@@ -448,9 +455,9 @@
             font-feature-settings: "lnum" 1, "tnum" 1;
         }
 
-        .num { color: var(--oro-medio); }
-        .num--seg { color: #fff2c8; text-shadow: 0 0 16px rgba(241, 222, 170, .45); }
-        .dos-puntos { color: var(--oro); }
+        .num { color: var(--plata-medio); }
+        .num--seg { color: #ffffff; text-shadow: 0 0 16px rgba(238, 241, 246, .45); }
+        .dos-puntos { color: var(--plata); }
 
         .unidad-etq {
             margin-top: .55rem;
@@ -459,7 +466,7 @@
             font-size: clamp(.52rem, 2.3vw, .78rem);
             letter-spacing: .08em;
             text-transform: uppercase;
-            color: var(--oro);
+            color: var(--plata);
         }
 
         /* =========================================================
@@ -474,14 +481,14 @@
 
         .fecha-lado {
             padding: .45rem 0;
-            border-block: 1px solid var(--oro);
+            border-block: 1px solid var(--plata);
             font-family: var(--sc);
             font-weight: 500;
             font-size: clamp(1rem, 4.2vw, 1.5rem);
             letter-spacing: .14em;
             text-align: center;
             text-transform: uppercase;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
         }
 
         .fecha-centro { text-align: center; }
@@ -492,7 +499,7 @@
             font-size: clamp(4.6rem, 22vw, 7.4rem);
             line-height: .95;
             padding: 0 .12em;
-            background: var(--grad-oro);
+            background: var(--grad-plata);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -508,7 +515,7 @@
             letter-spacing: .5em;
             padding-left: .5em;
             text-transform: uppercase;
-            color: var(--oro);
+            color: var(--plata);
         }
 
         .reproductor { margin-top: clamp(1.6rem, 5vw, 2.4rem); }
@@ -526,24 +533,24 @@
         }
         .pista::-webkit-slider-runnable-track {
             height: 2px;
-            background: linear-gradient(90deg, var(--oro) var(--p), rgba(212, 175, 55, .3) var(--p));
+            background: linear-gradient(90deg, var(--plata) var(--p), rgba(200, 207, 216, .3) var(--p));
         }
-        .pista::-moz-range-track { height: 2px; background: rgba(212, 175, 55, .3); }
-        .pista::-moz-range-progress { height: 2px; background: var(--oro); }
+        .pista::-moz-range-track { height: 2px; background: rgba(200, 207, 216, .3); }
+        .pista::-moz-range-progress { height: 2px; background: var(--plata); }
         .pista::-webkit-slider-thumb {
             -webkit-appearance: none;
             width: 14px; height: 14px;
             margin-top: -6px;
             border-radius: 50%;
-            background: var(--oro-claro);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, .25);
+            background: var(--plata-claro);
+            box-shadow: 0 0 0 3px rgba(200, 207, 216, .25);
         }
         .pista::-moz-range-thumb {
             width: 14px; height: 14px;
             border: 0;
             border-radius: 50%;
-            background: var(--oro-claro);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, .25);
+            background: var(--plata-claro);
+            box-shadow: 0 0 0 3px rgba(200, 207, 216, .25);
         }
 
         .controles {
@@ -562,21 +569,21 @@
             border: 0;
             border-radius: 50%;
             background: transparent;
-            color: var(--oro);
+            color: var(--plata);
             cursor: pointer;
             transition: transform .2s ease, color .2s ease;
             -webkit-tap-highlight-color: transparent;
         }
-        .ctl:hover { color: var(--oro-claro); transform: scale(1.08); }
+        .ctl:hover { color: var(--plata-claro); transform: scale(1.08); }
         .ctl svg { width: 1.5rem; height: 1.5rem; fill: currentColor; }
 
         .ctl--play {
             width: 3.8rem; height: 3.8rem;
-            background: var(--grad-oro);
-            color: #15110a;
-            box-shadow: 0 0 24px rgba(212, 175, 55, .35);
+            background: var(--grad-plata);
+            color: #0a0b0d;
+            box-shadow: 0 0 24px rgba(200, 207, 216, .35);
         }
-        .ctl--play:hover { color: #15110a; }
+        .ctl--play:hover { color: #0a0b0d; }
         .ctl--play svg { width: 1.7rem; height: 1.7rem; }
 
         .ico-pausa { display: none; }
@@ -591,32 +598,40 @@
             font-weight: 400;
             font-size: clamp(2.3rem, 9.5vw, 3.2rem);
             line-height: 1.2;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
+        }
+
+        .familia-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .familia-col { padding: 0 .4rem; }
+        .familia-col + .familia-col { border-left: 1px solid rgba(200, 207, 216, .45); }
+
+        .familia-col .titulo-script {
+            font-size: clamp(1.4rem, 6.2vw, 2.6rem);
+            line-height: 1.2;
+            white-space: nowrap;
         }
 
         .nombres {
-            margin-top: .5rem;
+            margin-top: .6rem;
             font-family: var(--sc);
             font-weight: 500;
-            font-size: clamp(1.1rem, 4.6vw, 1.55rem);
-            letter-spacing: .06em;
-            line-height: 1.45;
+            font-size: clamp(.95rem, 3.9vw, 1.45rem);
+            letter-spacing: .05em;
+            line-height: 1.5;
             color: var(--marfil);
         }
 
-        .nombres .union {
-            display: block;
-            font-family: var(--script);
-            font-size: 1.7em;
-            line-height: 1.1;
-            color: var(--oro);
-        }
+        .nombres span { display: block; text-wrap: balance; }
 
         .invita {
             font-family: var(--script);
             font-size: clamp(1.7rem, 7vw, 2.3rem);
             line-height: 1.3;
-            color: var(--oro-medio);
+            color: var(--plata-medio);
         }
 
         .invita--grande {
@@ -651,7 +666,7 @@
             font-size: clamp(.68rem, 2.4vw, .8rem);
             letter-spacing: .26em;
             text-transform: uppercase;
-            color: var(--oro);
+            color: var(--plata);
         }
 
         .lugar-nombre {
@@ -677,9 +692,9 @@
             margin-top: 1.4rem;
             aspect-ratio: 16 / 10;
             overflow: hidden;
-            border: 1px solid var(--oro);
+            border: 1px solid var(--plata);
             border-radius: 6px 24px 6px 24px;
-            background: #1a1713;
+            background: #17191c;
             box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
         }
 
@@ -689,7 +704,7 @@
             width: 100%;
             height: 100%;
             border: 0;
-            filter: sepia(.15) saturate(.9);
+            filter: grayscale(.35) contrast(1.02);
         }
 
         /* Toda la miniatura es un enlace directo a Google Maps */
@@ -707,10 +722,10 @@
             align-items: center;
             gap: .45rem;
             padding: .4rem .75rem;
-            border: 1px solid var(--oro);
+            border: 1px solid var(--plata);
             border-radius: 4px;
-            background: rgba(13, 12, 10, .9);
-            color: var(--oro-claro);
+            background: rgba(11, 12, 14, .9);
+            color: var(--plata-claro);
             font-family: var(--sans);
             font-weight: 400;
             font-size: .82rem;
@@ -718,12 +733,12 @@
             transition: background .2s ease, color .2s ease;
         }
         .mapa-chip svg { width: .95rem; height: .95rem; fill: none; stroke: currentColor; stroke-width: 2; }
-        .mapa-enlace:hover .mapa-chip { background: var(--oro); color: #15110a; }
+        .mapa-enlace:hover .mapa-chip { background: var(--plata); color: #0a0b0d; }
 
         /* =========================================================
            BOTONES
            ========================================================= */
-        .boton-oro,
+        .boton-plata,
         .boton-linea {
             display: inline-flex;
             align-items: center;
@@ -742,22 +757,22 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        .boton-oro {
-            border: 1px solid #f1deaa;
-            background: var(--grad-oro);
-            color: #15110a;
-            box-shadow: 0 8px 26px rgba(212, 175, 55, .3);
+        .boton-plata {
+            border: 1px solid #eef1f6;
+            background: var(--grad-plata);
+            color: #0a0b0d;
+            box-shadow: 0 8px 26px rgba(200, 207, 216, .3);
         }
-        .boton-oro:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(212, 175, 55, .45); }
+        .boton-plata:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(200, 207, 216, .45); }
 
         .boton-linea {
-            border: 1px solid var(--oro);
+            border: 1px solid var(--plata);
             background: transparent;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
         }
-        .boton-linea:hover { background: rgba(212, 175, 55, .14); transform: translateY(-2px); }
+        .boton-linea:hover { background: rgba(200, 207, 216, .14); transform: translateY(-2px); }
 
-        .boton-oro svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
+        .boton-plata svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
 
         .menciones-acceso { text-align: center; }
 
@@ -796,7 +811,7 @@
         dialog#menciones[open] { animation: entra .4s cubic-bezier(.2, .8, .2, 1); }
 
         dialog#menciones::backdrop {
-            background: rgba(6, 5, 4, .85);
+            background: rgba(5, 6, 8, .85);
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
         }
@@ -825,13 +840,13 @@
             place-items: center;
             width: 2.4rem; height: 2.4rem;
             padding: 0;
-            border: 1px solid rgba(212, 175, 55, .6);
+            border: 1px solid rgba(200, 207, 216, .6);
             border-radius: 50%;
-            background: rgba(13, 12, 10, .8);
-            color: var(--oro-claro);
+            background: rgba(11, 12, 14, .8);
+            color: var(--plata-claro);
             cursor: pointer;
         }
-        .cerrar:hover { background: var(--oro); color: #15110a; }
+        .cerrar:hover { background: var(--plata); color: #0a0b0d; }
         .cerrar svg { width: 1rem; height: 1rem; stroke: currentColor; stroke-width: 2; fill: none; }
 
         .cita {
@@ -849,39 +864,40 @@
             font-style: normal;
             font-size: 2.6rem;
             line-height: 0;
-            color: var(--oro);
+            color: var(--plata);
             opacity: .8;
         }
         .cita::before { content: "\201C"; display: block; text-align: left; height: .7rem; }
         .cita::after { content: "\201D"; display: block; text-align: right; height: 1rem; margin-top: .4rem; }
 
-        .familia-grid {
+        .cita p + p { margin-top: 1rem; }
+
+        .mencion-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.6rem 1rem;
+            gap: 1rem;
             margin: 2rem 0 1.8rem;
         }
 
-        .rol {
-            display: block;
-            font-family: var(--sans);
-            font-weight: 300;
-            font-size: .7rem;
-            letter-spacing: .3em;
-            padding-left: .3em;
-            text-transform: uppercase;
-            color: var(--oro);
+        .mencion-col {
+            padding-bottom: .9rem;
+            border-bottom: 1px solid rgba(200, 207, 216, .55); /* una sola línea al final de cada columna */
+        }
+
+        .mencion-col .titulo-script {
+            margin-bottom: .5rem;
+            font-size: clamp(1.4rem, 6.2vw, 2.4rem);
+            line-height: 1.2;
+            white-space: nowrap;
         }
 
         .nom {
             display: block;
-            margin-top: .35rem;
-            padding-bottom: .55rem;
-            border-bottom: 1px solid rgba(212, 175, 55, .45);
             font-family: var(--display);
-            font-size: clamp(1.15rem, 4.8vw, 1.5rem);
-            line-height: 1.2;
+            font-size: clamp(1.05rem, 4.4vw, 1.4rem);
+            line-height: 1.45;
             color: var(--marfil);
+            text-wrap: balance;
         }
 
         /* =========================================================
@@ -896,11 +912,11 @@
             place-items: center;
             width: 52px; height: 52px;
             padding: 0;
-            border: 1px solid var(--oro);
+            border: 1px solid var(--plata);
             border-radius: 50%;
-            background: rgba(13, 12, 10, .92);
-            color: var(--oro);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, .6), 0 0 18px rgba(212, 175, 55, .2);
+            background: rgba(11, 12, 14, .92);
+            color: var(--plata);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .6), 0 0 18px rgba(200, 207, 216, .2);
             cursor: pointer;
             opacity: 0;
             pointer-events: none;
@@ -919,7 +935,7 @@
         .pie .script {
             font-size: clamp(2.2rem, 9vw, 3rem);
             line-height: 1.2;
-            color: var(--oro-claro);
+            color: var(--plata-claro);
         }
 
         /* =========================================================
@@ -927,11 +943,7 @@
            ========================================================= */
         @media (min-width: 900px) {
             .columna { width: 640px; }
-            .familia-grid { gap: 2rem 1.5rem; }
-        }
-
-        @media (max-width: 340px) {
-            .familia-grid { grid-template-columns: 1fr; }
+            .mencion-grid { gap: 1.5rem; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -952,20 +964,20 @@
          ========================================================= -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
         <defs>
-            <linearGradient id="gOro" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#f7e7ab"/>
-                <stop offset=".5" stop-color="#d4af37"/>
-                <stop offset="1" stop-color="#8f6d1f"/>
+            <linearGradient id="gPlata" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset=".5" stop-color="#c4cad3"/>
+                <stop offset="1" stop-color="#7d8691"/>
             </linearGradient>
 
             <path id="petalo" d="M0 0C-11-12-10-32 0-42C10-32 11-12 0 0Z"/>
 
             <g id="hoja">
-                <path d="M0 0C8-9 26-9 36 0C26 9 8 9 0 0Z" fill="url(#gOro)" fill-opacity=".3" stroke="#d4af37" stroke-width=".9"/>
-                <path d="M3 0H30" stroke="#d4af37" stroke-width=".6" opacity=".7"/>
+                <path d="M0 0C8-9 26-9 36 0C26 9 8 9 0 0Z" fill="url(#gPlata)" fill-opacity=".3" stroke="#c4cad3" stroke-width=".9"/>
+                <path d="M3 0H30" stroke="#c4cad3" stroke-width=".6" opacity=".7"/>
             </g>
 
-            <g id="flor" fill="url(#gOro)" fill-opacity=".22" stroke="#d4af37" stroke-width="1" stroke-linejoin="round">
+            <g id="flor" fill="url(#gPlata)" fill-opacity=".22" stroke="#c4cad3" stroke-width="1" stroke-linejoin="round">
                 <g>
                     <use href="#petalo"/>
                     <use href="#petalo" transform="rotate(45)"/>
@@ -994,12 +1006,12 @@
                     <use href="#petalo" transform="rotate(240)"/>
                     <use href="#petalo" transform="rotate(300)"/>
                 </g>
-                <circle r="3.2" fill="#d4af37" stroke="none"/>
+                <circle r="3.2" fill="#c4cad3" stroke="none"/>
             </g>
 
             <!-- Racimo de flores para las esquinas (viewBox 0 0 230 190) -->
             <g id="racimo">
-                <g fill="none" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round" opacity=".85">
+                <g fill="none" stroke="#c4cad3" stroke-width="1.2" stroke-linecap="round" opacity=".85">
                     <path d="M78 76C105 62 130 52 160 38C185 28 205 18 226 6"/>
                     <path d="M78 76C60 105 45 125 34 150C28 165 20 178 8 188"/>
                 </g>
@@ -1024,7 +1036,7 @@
                 <use href="#flor" transform="translate(160 38) scale(.62)"/>
                 <use href="#flor" transform="translate(34 150) scale(.58)"/>
                 <!-- botones -->
-                <g fill="#d4af37">
+                <g fill="#c4cad3">
                     <circle cx="196" cy="88" r="4"/>
                     <circle cx="118" cy="150" r="3.5"/>
                     <circle cx="204" cy="12" r="3"/>
@@ -1035,7 +1047,7 @@
 
             <!-- Guirnalda horizontal (viewBox 0 0 260 64) -->
             <g id="guirnalda">
-                <ellipse cx="130" cy="32" rx="112" ry="9" fill="#100f0c"/>
+                <ellipse cx="130" cy="32" rx="112" ry="9" fill="#0e0f11"/>
                 <use href="#hoja" transform="translate(130 32) rotate(-6) translate(24 0) scale(.9)"/>
                 <use href="#hoja" transform="translate(130 32) rotate(186) translate(24 0) scale(.9)"/>
                 <use href="#hoja" transform="translate(130 32) rotate(-28) translate(22 0) scale(.7)"/>
@@ -1052,12 +1064,12 @@
             </g>
 
             <!-- Adorno de volutas (viewBox -70 -12 140 24) -->
-            <g id="adorno" fill="none" stroke="#d4af37" stroke-width="1.1" stroke-linecap="round">
+            <g id="adorno" fill="none" stroke="#c4cad3" stroke-width="1.1" stroke-linecap="round">
                 <path d="M-7 0C-17-9-29-9-37-1C-43 5-53 5-61-3"/>
                 <path d="M7 0C17-9 29-9 37-1C43 5 53 5 61-3"/>
-                <path d="M0-5L5 0L0 5L-5 0Z" fill="#d4af37"/>
-                <circle cx="-66" cy="-4" r="1.4" fill="#d4af37" stroke="none"/>
-                <circle cx="66" cy="-4" r="1.4" fill="#d4af37" stroke="none"/>
+                <path d="M0-5L5 0L0 5L-5 0Z" fill="#c4cad3"/>
+                <circle cx="-66" cy="-4" r="1.4" fill="#c4cad3" stroke="none"/>
+                <circle cx="66" cy="-4" r="1.4" fill="#c4cad3" stroke="none"/>
             </g>
         </defs>
     </svg>
@@ -1074,12 +1086,12 @@
 
                 <!-- Respaldo: solo aparece si no se encuentra sobre.jpg -->
                 <svg id="sobre-respaldo" class="sobre-respaldo oculto" viewBox="0 0 600 400" aria-hidden="true">
-                    <rect x="10" y="30" width="580" height="360" rx="6" fill="#171411" stroke="#d4af37" stroke-width="2"/>
-                    <path d="M10 36L300 250L590 36" fill="#1d1915" stroke="#d4af37" stroke-width="2" stroke-linejoin="round"/>
-                    <path d="M10 388L230 206M590 388L370 206" fill="none" stroke="#d4af37" stroke-width="1.5"/>
-                    <circle cx="300" cy="250" r="38" fill="url(#gOro)"/>
-                    <circle cx="300" cy="250" r="30" fill="none" stroke="#15110a" stroke-width="1.5" opacity=".6"/>
-                    <text x="300" y="258" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#15110a">XVIII</text>
+                    <rect x="10" y="30" width="580" height="360" rx="6" fill="#15171a" stroke="#c4cad3" stroke-width="2"/>
+                    <path d="M10 36L300 250L590 36" fill="#1b1d21" stroke="#c4cad3" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M10 388L230 206M590 388L370 206" fill="none" stroke="#c4cad3" stroke-width="1.5"/>
+                    <circle cx="300" cy="250" r="38" fill="url(#gPlata)"/>
+                    <circle cx="300" cy="250" r="30" fill="none" stroke="#0a0b0d" stroke-width="1.5" opacity=".6"/>
+                    <text x="300" y="258" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#0a0b0d">XVIII</text>
                 </svg>
             </div>
 
@@ -1126,11 +1138,42 @@
 
             <p class="hero-nombre">Yolanda</p>
             <p class="hero-texto">
-                Llegar a mis 18 años no es solo cumplir un número, es celebrar la historia que me trajo hasta aquí y a quienes la hicieron bonita. Te invito a acompañarme en esta noche tan especial para reír, recordar y crear memorias.
+                Celebrar la vida es reconocer la inmensa bondad de Dios. Hoy quiero agradecerle infinitamente por cada despertar, por la salud, por la sabiduría que me da día a día y por todas las experiencias que han ido moldeando la persona que soy hoy. Le doy gracias por bendecir mi presente y por regalarme el amor incondicional de quienes me acompañan y hacen que este viaje sea verdaderamente inolvidable, como también honrar el amor incansable de mi familia, quienes han tomado mi mano con paciencia, sabiduría y ternura en cada etapa de mi crecimiento.
+            </p>
+            <p class="hero-texto hero-texto--cierre">
+                Sería un honor contar con tu presencia en este día tan especial.
             </p>
         </header>
 
         <div class="columna">
+
+            <!-- 3. FECHA + REPRODUCTOR -->
+            <section class="bloque fecha" aria-label="Fecha del evento">
+                <div class="fecha-fila">
+                    <div class="fecha-lado">Sábado</div>
+                    <div class="fecha-centro">
+                        <span class="fecha-dia">12</span>
+                        <span class="fecha-mes">Diciembre</span>
+                    </div>
+                    <div class="fecha-lado">2026</div>
+                </div>
+
+                <div class="reproductor">
+                    <input type="range" class="pista" id="pista" min="0" max="1000" value="0" step="1" aria-label="Progreso de la canción">
+                    <div class="controles">
+                        <button type="button" class="ctl" id="ctl-ant" aria-label="Volver al inicio de la canción">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
+                        </button>
+                        <button type="button" class="ctl ctl--play" id="ctl-play" aria-label="Reproducir música">
+                            <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="ico-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                        </button>
+                        <button type="button" class="ctl" id="ctl-sig" aria-label="Adelantar 15 segundos">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5l11 7L4 19z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
 
             <!-- 4. CUENTA REGRESIVA (arriba de la fecha) -->
             <section class="bloque cuenta" aria-labelledby="lema-cuenta">
@@ -1169,60 +1212,33 @@
                 </div>
             </section>
 
-            <!-- 3. FECHA + REPRODUCTOR -->
-            <section class="bloque fecha" aria-label="Fecha del evento">
-                <div class="fecha-fila">
-                    <div class="fecha-lado">Sábado</div>
-                    <div class="fecha-centro">
-                        <span class="fecha-dia">12</span>
-                        <span class="fecha-mes">Diciembre</span>
-                    </div>
-                    <div class="fecha-lado">2026</div>
-                </div>
-
-                <div class="reproductor">
-                    <input type="range" class="pista" id="pista" min="0" max="1000" value="0" step="1" aria-label="Progreso de la canción">
-                    <div class="controles">
-                        <button type="button" class="ctl" id="ctl-ant" aria-label="Volver al inicio de la canción">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
-                        </button>
-                        <button type="button" class="ctl ctl--play" id="ctl-play" aria-label="Reproducir música">
-                            <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                            <svg class="ico-pausa" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
-                        </button>
-                        <button type="button" class="ctl" id="ctl-sig" aria-label="Adelantar 15 segundos">
-                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5l11 7L4 19z"/></svg>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
             <!-- PADRES Y PADRINOS -->
             <section class="bloque familia" aria-label="Padres y padrinos">
                 <div class="panel">
                     <svg class="racimo racimo--ai" viewBox="0 0 230 190" aria-hidden="true"><use href="#racimo"/></svg>
                     <svg class="racimo racimo--bd" viewBox="0 0 230 190" aria-hidden="true"><use href="#racimo"/></svg>
 
-                    <h2 class="titulo-script">Mis Padres:</h2>
-                    <p class="nombres">
-                        Jaime Hernández
-                        <span class="union">&amp;</span>
-                        Eustolia Cruz
-                    </p>
+                    <div class="familia-cols">
+                        <div class="familia-col">
+                            <h2 class="titulo-script">Mis padres</h2>
+                            <p class="nombres">
+                                <span>Jaime Hernández</span>
+                                <span>Eustolia Cruz</span>
+                            </p>
+                        </div>
+                        <div class="familia-col">
+                            <h2 class="titulo-script">Mis padrinos</h2>
+                            <p class="nombres">
+                                <span>Joel Osorio</span>
+                                <span>Minerva Cruz</span>
+                            </p>
+                        </div>
+                    </div>
 
                     <svg class="adorno" viewBox="-70 -12 140 24" aria-hidden="true"><use href="#adorno"/></svg>
 
-                    <p class="invita">Tenemos el honor de invitarlos a</p>
-                    <p class="invita invita--grande grad-oro">Mis XVIII años</p>
-
-                    <svg class="adorno" viewBox="-70 -12 140 24" aria-hidden="true"><use href="#adorno"/></svg>
-
-                    <h2 class="titulo-script">Mis Padrinos:</h2>
-                    <p class="nombres">
-                        Joel Osorio
-                        <span class="union">y</span>
-                        Minerva Cruz
-                    </p>
+                    <p class="invita">Tenemos el honor de invitarte a</p>
+                    <p class="invita invita--grande grad-plata">Mis XVIII años</p>
                 </div>
             </section>
 
@@ -1280,11 +1296,11 @@
                 </article>
             </section>
 
-            <!-- 6. BOTÓN: MENCIONES ESPECIALES (abre una ventana) -->
-            <section class="bloque menciones-acceso" aria-label="Menciones especiales">
+            <!-- 6. BOTÓN: MENCIÓN ESPECIAL (abre una ventana) -->
+            <section class="bloque menciones-acceso" aria-label="Mención especial">
                 <svg class="adorno" viewBox="-70 -12 140 24" aria-hidden="true"><use href="#adorno"/></svg>
-                <button type="button" class="boton-oro" id="abrir-menciones" aria-haspopup="dialog">
-                    Menciones especiales
+                <button type="button" class="boton-plata" id="abrir-menciones" aria-haspopup="dialog">
+                    Mención especial
                 </button>
             </section>
 
@@ -1299,7 +1315,7 @@
                     <p class="rsvp-texto">Por favor confirma tu asistencia dando clic aquí:</p>
 
                     <div class="rsvp-botones">
-                        <a class="boton-oro" data-wa="si" href="#" target="_blank" rel="noopener">
+                        <a class="boton-plata" data-wa="si" href="#" target="_blank" rel="noopener">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2A9.9 9.9 0 0 0 3.6 17.07L2 22l5.07-1.56A9.93 9.93 0 1 0 12.04 2zm5.8 14.04c-.25.7-1.45 1.34-2 1.4-.52.06-1.17.09-1.88-.12a17 17 0 0 1-1.7-.63c-3-1.3-4.95-4.34-5.1-4.54-.15-.2-1.2-1.6-1.2-3.04s.76-2.15 1.03-2.44c.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.93 2.22.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.32.38-.45.51-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.75.83 2.05.98.3.15.5.22.57.35.08.12.08.72-.17 1.42z"/></svg>
                             Sí, ahí estaré
                         </a>
@@ -1330,18 +1346,25 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg>
             </button>
 
-            <h2 class="titulo-display" id="menciones-titulo">Menciones especiales</h2>
+            <h2 class="titulo-display" id="menciones-titulo">Mención especial</h2>
             <span class="regla"></span>
 
             <blockquote class="cita">
-                <p>A mis padres, por darme la vida, sostener mis pasos y ser el pilar de cada uno de mis sueños. A mis padrinos, por su cariño incondicional, su guía constante y por aceptar caminar a mi lado. Gracias a los cuatro por enseñarme a volar con la certeza de que siempre tengo un hogar en sus corazones.</p>
+                <p>Gracias a los cuatro por enseñarme a volar con la certeza de que siempre tengo un hogar en sus corazones.</p>
+                <p>A mis Padres, por darme la vida, sostener mis pasos y ser el pilar de cada uno de mis sueños y a mis Padrinos por su cariño incondicional, su guía constante y aceptar caminar a mi lado como unos segundos padres para mí.</p>
             </blockquote>
 
-            <div class="familia-grid">
-                <div><span class="rol">Padre</span><span class="nom">Jaime Hernández</span></div>
-                <div><span class="rol">Madre</span><span class="nom">Eustolia Cruz</span></div>
-                <div><span class="rol">Padrino</span><span class="nom">Joel Osorio</span></div>
-                <div><span class="rol">Madrina</span><span class="nom">Minerva Cruz</span></div>
+            <div class="mencion-grid">
+                <div class="mencion-col">
+                    <h3 class="titulo-script">Mis padres</h3>
+                    <span class="nom">Jaime Hernández</span>
+                    <span class="nom">Eustolia Cruz</span>
+                </div>
+                <div class="mencion-col">
+                    <h3 class="titulo-script">Mis padrinos</h3>
+                    <span class="nom">Joel Osorio</span>
+                    <span class="nom">Minerva Cruz</span>
+                </div>
             </div>
 
             <button type="button" class="boton-linea" data-cerrar>Cerrar</button>
