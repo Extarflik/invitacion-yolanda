@@ -20,14 +20,14 @@
         :root {
             --negro: #0a0b0c;
             --panel: #0e0f11;
-            --plata: #c4cad3;
-            --plata-claro: #eef1f6;
-            --plata-medio: #cfd5de;
+            --plata: #dfe4eb;
+            --plata-claro: #ffffff;
+            --plata-medio: #f4f6fa;
             --plata-hondo: #7d8691;
-            --marfil: #eef1f5;
-            --texto: #cdd2da;
-            --texto-suave: #98a0ab;
-            --grad-plata: linear-gradient(135deg, #ffffff 0%, #c4cad3 40%, #868f9b 68%, #eef1f6 100%);
+            --marfil: #ffffff;
+            --texto: #f3f5f8;
+            --texto-suave: #cdd3dc;
+            --grad-plata: linear-gradient(135deg, #ffffff 0%, #eef1f5 38%, #b9c1cc 68%, #ffffff 100%);
 
             --serif: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
             --sc: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
@@ -51,7 +51,9 @@
             color: var(--texto);
             font-family: var(--serif);
             font-size: 1.1rem;
+            font-weight: 500;
             line-height: 1.6;
+            text-shadow: 0 0 12px rgba(255, 255, 255, .16), 0 0 2px rgba(255, 255, 255, .12);
             overflow-x: hidden;
             background:
                 radial-gradient(70% 40% at 50% 0%, rgba(200, 207, 216, .10), transparent 70%),
@@ -159,28 +161,18 @@
             z-index: 1;
             display: block;
             --ratio: 1.5;
-            width: min(92vw, 640px, calc(56dvh * var(--ratio)));
+            width: min(100vw, 700px, calc(58dvh * var(--ratio)));
             height: auto;
             animation: flota 4.5s ease-in-out infinite;
         }
 
-        /* Bordes difuminados: desaparece el "recuadro" alrededor de la imagen */
-        .sobre-img {
-            -webkit-mask-image:
-                linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%),
-                linear-gradient(180deg, transparent 0, #000 4%, #000 96%, transparent 100%);
-            -webkit-mask-composite: source-in;
-            mask-image:
-                linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%),
-                linear-gradient(180deg, transparent 0, #000 4%, #000 96%, transparent 100%);
-            mask-composite: intersect;
-        }
+        /* sobre.png ya es transparente y trae su propio borde con luz: no necesita máscara */
 
         .sobre-respaldo { filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .6)); }
 
         .sobre-pista {
             font-family: var(--sc);
-            font-size: clamp(.85rem, 3vw, 1.05rem);
+            font-size: clamp(.95rem, 3.3vw, 1.15rem);
             letter-spacing: .32em;
             text-transform: uppercase;
             color: var(--plata-claro);
@@ -288,7 +280,7 @@
         .cinta-grupo span {
             font-family: var(--sans);
             font-weight: 400;
-            font-size: clamp(.68rem, 2.3vw, .85rem);
+            font-size: clamp(.76rem, 2.6vw, .95rem);
             letter-spacing: .34em;
             text-transform: uppercase;
             color: var(--plata-claro);
@@ -334,11 +326,11 @@
             font-style: italic;
             font-size: clamp(1.1rem, 3.5vw, 1.4rem);
             line-height: 1.65;
-            color: #b9c0ca;
+            color: #f0f3f7;
             text-wrap: pretty;
         }
 
-        .hero-texto { font-size: clamp(1.05rem, 3.3vw, 1.3rem); }
+        .hero-texto { font-size: clamp(1.12rem, 3.6vw, 1.38rem); }
         .hero-texto--cierre {
             margin-top: 1.1rem;
             color: var(--plata-claro);
@@ -476,7 +468,7 @@
             margin-top: .55rem;
             font-family: var(--sc);
             font-weight: 500;
-            font-size: clamp(.52rem, 2.3vw, .78rem);
+            font-size: clamp(.58rem, 2.5vw, .86rem);
             letter-spacing: .08em;
             text-transform: uppercase;
             color: var(--plata);
@@ -524,7 +516,7 @@
             margin-top: .1rem;
             font-family: var(--sc);
             font-weight: 500;
-            font-size: clamp(.8rem, 3.2vw, 1.05rem);
+            font-size: clamp(.9rem, 3.5vw, 1.15rem);
             letter-spacing: .5em;
             padding-left: .5em;
             text-transform: uppercase;
@@ -632,7 +624,7 @@
             margin-top: .6rem;
             font-family: var(--sc);
             font-weight: 500;
-            font-size: clamp(.95rem, 3.9vw, 1.45rem);
+            font-size: clamp(.98rem, 4vw, 1.5rem);
             letter-spacing: .05em;
             line-height: 1.5;
             color: var(--marfil);
@@ -659,8 +651,8 @@
 
         .sobretitulo {
             font-family: var(--sans);
-            font-weight: 300;
-            font-size: clamp(.68rem, 2.4vw, .8rem);
+            font-weight: 400;
+            font-size: clamp(.76rem, 2.7vw, .9rem);
             letter-spacing: .4em;
             padding-left: .4em;
             text-transform: uppercase;
@@ -676,7 +668,7 @@
         .lugar-tipo {
             font-family: var(--sans);
             font-weight: 400;
-            font-size: clamp(.68rem, 2.4vw, .8rem);
+            font-size: clamp(.76rem, 2.7vw, .9rem);
             letter-spacing: .26em;
             text-transform: uppercase;
             color: var(--plata);
@@ -695,8 +687,8 @@
         .lugar-dir {
             margin-top: .3rem;
             font-family: var(--sans);
-            font-weight: 300;
-            font-size: clamp(.95rem, 3.4vw, 1.05rem);
+            font-weight: 400;
+            font-size: clamp(1.03rem, 3.7vw, 1.15rem);
             color: var(--texto);
         }
 
@@ -741,7 +733,7 @@
             color: var(--plata-claro);
             font-family: var(--sans);
             font-weight: 400;
-            font-size: .82rem;
+            font-size: .9rem;
             line-height: 1.2;
             transition: background .2s ease, color .2s ease;
         }
@@ -792,7 +784,7 @@
             max-width: 26rem;
             margin: 0 auto 1.6rem;
             font-style: italic;
-            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            font-size: clamp(1.15rem, 4.2vw, 1.38rem);
             color: var(--texto);
         }
 
@@ -1002,7 +994,7 @@
             max-width: 30rem;
             margin: 0 auto;
             font-style: italic;
-            font-size: clamp(1.05rem, 3.9vw, 1.25rem);
+            font-size: clamp(1.12rem, 4.1vw, 1.32rem);
             line-height: 1.8;
             color: var(--texto);
             text-wrap: pretty;
@@ -1023,7 +1015,7 @@
             margin-bottom: .45rem;
             font-family: var(--sans);
             font-weight: 400;
-            font-size: .72rem;
+            font-size: .8rem;
             letter-spacing: .2em;
             text-transform: uppercase;
             color: var(--plata);
@@ -1033,8 +1025,8 @@
             margin-top: .5rem;
             text-align: center;
             font-family: var(--sans);
-            font-weight: 300;
-            font-size: .85rem;
+            font-weight: 400;
+            font-size: .93rem;
             color: var(--texto-suave);
         }
         .campo input {
@@ -1084,7 +1076,7 @@
             min-height: 1.5em;
             margin: .9rem auto 0;
             font-family: var(--sans);
-            font-size: .92rem;
+            font-size: 1rem;
             color: #ffd0d0;
         }
         .aviso--ok { color: var(--plata-claro); }
@@ -1101,7 +1093,7 @@
             margin: .6rem auto 1.4rem;
             max-width: 22rem;
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.28rem;
             color: var(--texto);
         }
 
@@ -1122,7 +1114,7 @@
         }
         .total-grande span, .total-mini span {
             font-family: var(--sans);
-            font-size: .72rem;
+            font-size: .8rem;
             letter-spacing: .18em;
             text-transform: uppercase;
             color: var(--plata);
@@ -1158,15 +1150,19 @@
             padding: .55rem 0;
             border-bottom: 1px solid rgba(200, 207, 216, .25);
             font-family: var(--sans);
-            font-weight: 300;
-            font-size: 1rem;
+            font-weight: 400;
+            font-size: 1.08rem;
             color: var(--texto);
         }
         .lista li em { font-style: normal; white-space: nowrap; color: var(--plata); }
         .lista-vacia { padding: .5rem 0; color: var(--texto-suave); font-style: italic; font-size: 1rem; }
         .acciones { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-top: 1rem; }
         .acciones .boton-linea { min-height: 2.8rem; padding: .5rem 1.4rem; font-size: 1rem; }
-        .nota-local { margin-top: 1rem; font-size: .9rem; font-style: italic; color: var(--texto-suave); }
+        .nota-local { margin-top: 1rem; font-size: 1rem; font-style: italic; color: var(--texto-suave); }
+
+        /* Texto con degradado plateado: sin sombra de texto (usa su propio resplandor) */
+        .hero-romano, .hero-nombre, .sobre-nombre, .fecha-dia, .grad-plata { text-shadow: none; }
+        .boton-plata { text-shadow: none; }
     </style>
 </head>
 <body class="bloqueado">
@@ -1303,7 +1299,7 @@
             <p class="sobre-nombre">Yolanda</p>
 
             <div class="sobre-caja">
-                <img id="sobre-img" class="sobre-img" src="sobre.jpg" alt="Sobre de la invitación" draggable="false">
+                <img id="sobre-img" class="sobre-img" src="sobre.png" alt="Sobre de la invitación" draggable="false">
 
                 <!-- Respaldo: solo aparece si no se encuentra sobre.jpg -->
                 <svg id="sobre-respaldo" class="sobre-respaldo oculto" viewBox="0 0 600 400" aria-hidden="true">
